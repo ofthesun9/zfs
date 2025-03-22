@@ -1,0 +1,38 @@
+From d033f26765940b34027a39b9f86417d83d20a754 Mon Sep 17 00:00:00 2001
+From: Alan Somers <asomers@gmail.com>
+Date: Wed, 19 Mar 2025 09:24:43 -0600
+Subject: [PATCH 5001/5001] Always perform bounds-checking in
+ metaslab_free_concrete
+
+The vd->vdev_ms access can overflow due to on-disk corruption, not just
+due to programming bugs.  So it makes sense to check its boundaries even
+in production builds.
+
+Sponsored by:	ConnectWise
+Reviewed by: Alek Pinchuk <pinchuk.alek@gmail.com>
+Reviewed-by: Tony Hutter <hutter2@llnl.gov>
+Reviewed-by: Alexander Motin <mav@FreeBSD.org>
+Signed-off-by:	Alan Somers <asomers@gmail.com>
+Closes #17136
+---
+ module/zfs/metaslab.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+--- a/module/zfs/metaslab.c
++++ b/module/zfs/metaslab.c
+@@ -5405,12 +5405,13 @@
+ {
+ 	metaslab_t *msp;
+ 	spa_t *spa = vd->vdev_spa;
++	int m = offset >> vd->vdev_ms_shift;
+ 
+ 	ASSERT(vdev_is_concrete(vd));
+ 	ASSERT3U(spa_config_held(spa, SCL_ALL, RW_READER), !=, 0);
+-	ASSERT3U(offset >> vd->vdev_ms_shift, <, vd->vdev_ms_count);
++	VERIFY3U(m, <, vd->vdev_ms_count);
+ 
+-	msp = vd->vdev_ms[offset >> vd->vdev_ms_shift];
++	msp = vd->vdev_ms[m];
+ 
+ 	VERIFY(!msp->ms_condensing);
+ 	VERIFY3U(offset, >=, msp->ms_start);

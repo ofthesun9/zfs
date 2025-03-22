@@ -1,3 +1,12 @@
+zfs-linux (2.3.1-1ofthesun3) nodistro; urgency=medium
+
+  * sync with 2.3.1-1ubuntu1 from plucky
+  * adding upstream patches 
+    + upstream/5001-Some-arc_release-cleanup.patch 
+    + upstream/5002-Always-perform-bounds-checking-in-metaslab_free_conc.patch 
+
+ -- ofthesun9 <olivier@ofthesun.net>  Sat, 22 Mar 2025 18:26:07 +0100
+
 zfs-linux (2.3.1-1ofthesun2) nodistro; urgency=medium
 
   * Using launchpad receipe
