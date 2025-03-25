@@ -1,3 +1,9 @@
+zfs-linux (2.3.1-1ofthesun5) nodistro; urgency=medium
+
+  * un-applying upstream/0004-revert-zinject-count-matches-and-injections-for-each-handler.patch
+
+ -- ofthesun9 <olivier@ofthesun.net>  Tue, 25 Mar 2025 22:36:37 +0100
+
 zfs-linux (2.3.1-1ofthesun4) nodistro; urgency=medium
 
   * applying upstream/0004-revert-zinject-count-matches-and-injections-for-each-handler.patch

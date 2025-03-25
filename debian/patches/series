@@ -24,6 +24,5 @@ upstream/zvol-correctly-detect-flush-requests.patch
 upstream/5000-Check-portable-objset-MAC-even-if-local-is-zeroed.patch
 upstream/5001-Some-arc_release-cleanup.patch
 upstream/5002-Always-perform-bounds-checking-in-metaslab_free_conc.patch
-upstream/0004-revert-zinject-count-matches-and-injections-for-each-handler.patch
 ofthesun/2002-man-4-zfs-spelling-error.patch
 ofthesun/2003-man-7-vdevprops-spelling-error.patch
