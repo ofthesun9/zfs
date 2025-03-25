@@ -1,3 +1,10 @@
+zfs-linux (2.3.1-1ofthesun4) nodistro; urgency=medium
+
+  * applying upstream/0004-revert-zinject-count-matches-and-injections-for-each-handler.patch
+  * un-applying 1006-zed-service-bindir.patch
+
+ -- ofthesun9 <olivier@ofthesun.net>  Tue, 25 Mar 2025 20:25:54 +0100
+
 zfs-linux (2.3.1-1ofthesun3) nodistro; urgency=medium
 
   * sync with 2.3.1-1ubuntu1 from plucky
