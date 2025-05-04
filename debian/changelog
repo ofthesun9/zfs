@@ -1,3 +1,10 @@
+zfs-linux (2.3.2-0ofthesun1) nodistro; urgency=medium
+
+  * zfs 2.3.2 release
+  * remove unused patches 
+
+ -- ofthesun9 <olivier@ofthesun.net>  Sun, 04 May 2025 13:13:33 +0200
+
 zfs-linux (2.3.1-1ofthesun6) nodistro; urgency=medium
 
   * applying upstream/0004-revert-zinject-count-matches-and-injections-for-each-handler.patch 
