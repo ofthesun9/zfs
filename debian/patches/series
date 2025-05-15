@@ -21,3 +21,4 @@ fix-pyzfs-version.patch
 BUILD_EXCLUSIVE_KERNEL_MIN.patch
 #0000_unapplied/bump-Linux-Minimum.patch
 upstream/5001-Some-arc_release-cleanup.patch
+fix-pr12014.patch
