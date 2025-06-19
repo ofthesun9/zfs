@@ -1,3 +1,10 @@
+zfs-linux (2.3.3-0ofthesun1) nodistro; urgency=medium
+
+  * zfs 2.3.3 release
+  * remove unused patch fix-pr12014.patch
+
+ -- ofthesun9 <olivier@ofthesun.net>  Thu, 19 Jun 2025 20:52:11 +0200
+
 zfs-linux (2.3.2-0ofthesun2) nodistro; urgency=medium
 
   * add fix-pr12014.patch

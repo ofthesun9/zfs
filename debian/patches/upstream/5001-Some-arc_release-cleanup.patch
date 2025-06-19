@@ -23,7 +23,7 @@ Closes #17126
 
 --- a/module/zfs/arc.c
 +++ b/module/zfs/arc.c
-@@ -6333,27 +6333,11 @@
+@@ -6627,27 +6627,11 @@
  	arc_state_t *state = hdr->b_l1hdr.b_state;
  	ASSERT3P(hash_lock, ==, HDR_LOCK(hdr));
  	ASSERT3P(state, !=, arc_anon);
@@ -52,7 +52,7 @@ Closes #17126
  	/*
  	 * Do we have more than one buf?
  	 */
-@@ -6365,10 +6349,6 @@
+@@ -6659,10 +6643,6 @@
  		boolean_t protected = HDR_PROTECTED(hdr);
  		enum zio_compress compress = arc_hdr_get_compress(hdr);
  		arc_buf_contents_t type = arc_buf_type(hdr);
@@ -63,7 +63,7 @@ Closes #17126
  
  		if (ARC_BUF_SHARED(buf) && !ARC_BUF_COMPRESSED(buf)) {
  			ASSERT3P(hdr->b_l1hdr.b_buf, !=, buf);
-@@ -6376,10 +6356,10 @@
+@@ -6670,10 +6650,10 @@
  		}
  
  		/*
@@ -76,7 +76,7 @@ Closes #17126
  		arc_buf_t *lastbuf = arc_buf_remove(hdr, buf);
  		ASSERT3P(lastbuf, !=, NULL);
  
-@@ -6388,7 +6368,6 @@
+@@ -6682,7 +6662,6 @@
  		 * buffer, then we must stop sharing that block.
  		 */
  		if (ARC_BUF_SHARED(buf)) {
@@ -84,7 +84,7 @@ Closes #17126
  			ASSERT(!arc_buf_is_shared(lastbuf));
  
  			/*
-@@ -6410,7 +6389,6 @@
+@@ -6704,7 +6683,6 @@
  				abd_copy_from_buf(hdr->b_l1hdr.b_pabd,
  				    buf->b_data, psize);
  			}
@@ -92,7 +92,7 @@ Closes #17126
  		} else if (HDR_SHARED_DATA(hdr)) {
  			/*
  			 * Uncompressed shared buffers are always at the end
-@@ -6426,18 +6404,10 @@
+@@ -6720,18 +6698,10 @@
  		}
  
  		ASSERT(hdr->b_l1hdr.b_pabd != NULL || HDR_HAS_RABD(hdr));
@@ -111,7 +111,7 @@ Closes #17126
  		arc_cksum_verify(buf);
  		arc_buf_unwatch(buf);
  
-@@ -6465,6 +6435,15 @@
+@@ -6759,6 +6729,15 @@
  		/* protected by hash lock, or hdr is on arc_anon */
  		ASSERT(!multilist_link_active(&hdr->b_l1hdr.b_arc_node));
  		ASSERT(!HDR_IO_IN_PROGRESS(hdr));
