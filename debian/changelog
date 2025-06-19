@@ -1,3 +1,9 @@
+zfs-linux (2.3.3-0ofthesun2) nodistro; urgency=medium
+
+  * debian: update symbols 
+
+ -- ofthesun9 <olivier@ofthesun.net>  Thu, 19 Jun 2025 21:44:11 +0200
+
 zfs-linux (2.3.3-0ofthesun1) nodistro; urgency=medium
 
   * zfs 2.3.3 release
