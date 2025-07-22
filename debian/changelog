@@ -1,3 +1,9 @@
+zfs-linux (2.3.3-0ofthesun3) nodistro; urgency=medium
+
+  * debian: add upstream patch 5002-enforce-arc_dnode_limit.patch
+
+ -- ofthesun9 <olivier@ofthesun.net>  Tue, 22 Jul 2025 16:46:15 +0200
+
 zfs-linux (2.3.3-0ofthesun2) nodistro; urgency=medium
 
   * debian: update symbols 
