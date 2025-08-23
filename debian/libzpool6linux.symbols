@@ -55,7 +55,6 @@ libzpool.so.6 libzpool6linux #MINVER#
  __dmu_object_info_from_dnode@Base 0.8.2
  __dprintf@Base 0.8.2
  __set_error@Base 0.8.2
- __spl_pf_fstrans_check@Base 0.8.2
  __zfs_dbgmsg@Base 0.8.2
  (arch=amd64)_key_expansion_128@Base 0.8.2
  (arch=amd64)_key_expansion_192a@Base 0.8.2
@@ -505,7 +504,6 @@ libzpool.so.6 libzpool6linux #MINVER#
  dbuf_init@Base 0.8.2
  dbuf_is_l2cacheable@Base 2.1.6
  dbuf_is_metadata@Base 0.8.2
- dbuf_loan_arcbuf@Base 0.8.2
  dbuf_new_size@Base 0.8.2
  dbuf_prefetch@Base 0.8.2
  dbuf_prefetch_impl@Base 2.1
@@ -683,7 +681,6 @@ libzpool.so.6 libzpool6linux #MINVER#
  dmu_object_size_from_db@Base 0.8.2
  dmu_object_zapify@Base 0.8.2
  dmu_objset_byteswap@Base 0.8.2
- dmu_objset_clone@Base 0.8.2
  dmu_objset_create@Base 0.8.2
  dmu_objset_create_crypt_check@Base 0.8.2
  dmu_objset_create_impl@Base 0.8.2
@@ -815,7 +812,6 @@ libzpool.so.6 libzpool6linux #MINVER#
  dmu_write@Base 0.8.2
  dmu_write_abd@Base 2.3
  dmu_write_by_dnode@Base 0.8.2
- dmu_write_by_dnode_flags@Base 2.3
  dmu_write_direct@Base 2.3
  dmu_write_embedded@Base 0.8.2
  dmu_write_policy@Base 0.8.2
@@ -847,7 +843,6 @@ libzpool.so.6 libzpool6linux #MINVER#
  dnode_rele_and_unlock@Base 0.8.2
  dnode_rm_spill@Base 0.8.2
  dnode_set_blksz@Base 0.8.2
- dnode_set_dirtyctx@Base 2.0
  dnode_set_nlevels@Base 0.8.2
  dnode_set_storage_type@Base 2.3
  dnode_setbonus_type@Base 0.8.2
@@ -1585,7 +1580,6 @@ libzpool.so.6 libzpool6linux #MINVER#
  metaslab_free_impl_cb@Base 0.8.2
  metaslab_group_activate@Base 0.8.2
  metaslab_group_alloc_decrement@Base 0.8.2
- metaslab_group_alloc_verify@Base 0.8.2
  metaslab_group_create@Base 0.8.2
  metaslab_group_destroy@Base 0.8.2
  metaslab_group_fragmentation@Base 0.8.2
@@ -1600,7 +1594,6 @@ libzpool.so.6 libzpool6linux #MINVER#
  metaslab_ndf_clump_shift@Base 2.3
  metaslab_preload_limit@Base 0.8.2
  metaslab_recalculate_weight_and_sort@Base 0.8.2
- metaslab_rt_name@Base 2.3.4
  metaslab_set_selected_txg@Base 2.0
  metaslab_set_unflushed_dirty@Base 2.1.6
  metaslab_set_unflushed_txg@Base 2.0
@@ -1695,7 +1688,6 @@ libzpool.so.6 libzpool6linux #MINVER#
  zfs_range_tree_clear@Base 0.8.2
  zfs_range_tree_contains@Base 0.8.2
  zfs_range_tree_create@Base 0.8.2
- zfs_range_tree_create_flags@Base 2.3.4
  zfs_range_tree_create_gap@Base 2.1.6
  zfs_range_tree_destroy@Base 0.8.2
  zfs_range_tree_find@Base 0.8.2
@@ -1783,7 +1775,6 @@ libzpool.so.6 libzpool6linux #MINVER#
  scan_init@Base 0.8.2
  secpolicy_zfs@Base 0.8.2
  seq_printf@Base 0.8.2
- set_global_var@Base 0.8.2
  (arch=armel armhf arm64)sha256_armv7_impl@Base 2.2.0
  (arch=armhf arm64)sha256_armv8_impl@Base 2.2.0
  (arch=amd64)sha256_avx2_impl@Base 2.2.0
@@ -1830,7 +1821,6 @@ libzpool.so.6 libzpool6linux #MINVER#
  spa_async_resume@Base 0.8.2
  spa_async_suspend@Base 0.8.2
  spa_async_tasks@Base 0.8.3
- spa_boot_init@Base 0.8.2
  spa_bootfs@Base 0.8.2
  spa_by_guid@Base 0.8.2
  spa_change_guid@Base 0.8.2
@@ -1850,7 +1840,6 @@ libzpool.so.6 libzpool6linux #MINVER#
  spa_config_exit@Base 0.8.2
  spa_config_generate@Base 0.8.2
  spa_config_held@Base 0.8.2
- spa_config_load@Base 0.8.2
  spa_config_parse@Base 2.0
  spa_config_path@Base 0.8.2
  spa_config_set@Base 0.8.2
@@ -2221,12 +2210,6 @@ libzpool.so.6 libzpool6linux #MINVER#
  u8_validate@Base 0.8.2
  uberblock_update@Base 0.8.2
  uberblock_verify@Base 0.8.2
- uconv_u16tou32@Base 0.8.2
- uconv_u16tou8@Base 0.8.2
- uconv_u32tou16@Base 0.8.2
- uconv_u32tou8@Base 0.8.2
- uconv_u8tou16@Base 0.8.2
- uconv_u8tou32@Base 0.8.2
  undo_register_provider@Base 0.8.2
  unique_create@Base 0.8.2
  unique_fini@Base 0.8.2
@@ -2415,7 +2398,6 @@ libzpool.so.6 libzpool6linux #MINVER#
  vdev_queue_io_done@Base 0.8.2
  vdev_queue_last_offset@Base 0.8.2
  vdev_queue_length@Base 0.8.2
- vdev_queue_pool_busy@Base 2.3.4
  (arch=arm64)vdev_raidz_aarch64_neon_impl@Base 0.8.2
  (arch=arm64)vdev_raidz_aarch64_neonx2_impl@Base 0.8.2
  vdev_raidz_attach_check@Base 2.3
@@ -2468,7 +2450,6 @@ libzpool.so.6 libzpool6linux #MINVER#
  vdev_replacing_ops@Base 0.8.2
  vdev_resilver_needed@Base 0.8.2
  vdev_root_ops@Base 0.8.2
- vdev_rt_name@Base 2.3.4
  vdev_scan_stat_init@Base 0.8.2
  vdev_set_min_asize@Base 0.8.2
  vdev_set_state@Base 0.8.2
@@ -3005,13 +2986,9 @@ libzpool.so.6 libzpool6linux #MINVER#
  zfs_deadman_failmode@Base 0.8.2
  zfs_deadman_synctime_ms@Base 0.8.2
  zfs_deadman_ziotime_ms@Base 0.8.2
- zfs_dedup_log_cap@Base 2.3.4
- zfs_dedup_log_flush_entries_max@Base 2.3.4
  zfs_dedup_log_flush_entries_min@Base 2.3
  zfs_dedup_log_flush_flow_rate_txgs@Base 2.3
  zfs_dedup_log_flush_min_time_ms@Base 2.3
- zfs_dedup_log_flush_txgs@Base 2.3.4
- zfs_dedup_log_hard_cap@Base 2.3.4
  zfs_dedup_log_mem_max@Base 2.3
  zfs_dedup_log_mem_max_percent@Base 2.3
  zfs_dedup_log_txg_max@Base 2.3
@@ -3221,14 +3198,11 @@ libzpool.so.6 libzpool6linux #MINVER#
  zfs_vdev_async_read_max_active@Base 0.8.2
  zfs_vdev_async_write_active_max_dirty_percent@Base 0.8.2
  zfs_vdev_async_write_active_min_dirty_percent@Base 0.8.2
- zfs_vdev_async_write_max_active@Base 0.8.2
- zfs_vdev_def_queue_depth@Base 0.8.2
  zfs_vdev_direct_write_verify@Base 2.3
  zfs_vdev_dtl_sm_blksz@Base 2.0
  zfs_vdev_max_active@Base 0.8.2
  zfs_vdev_max_auto_ashift@Base 2.0
  zfs_vdev_min_auto_ashift@Base 2.0
- zfs_vdev_queue_depth_pct@Base 0.8.2
  zfs_vdev_raidz_impl@Base 2.3.1
  zfs_vdev_standard_sm_blksz@Base 2.0
  zfs_wrlog_data_max@Base 2.1.6
@@ -3249,7 +3223,6 @@ libzpool.so.6 libzpool6linux #MINVER#
  zil_clean@Base 0.8.2
  zil_close@Base 0.8.2
  zil_commit@Base 0.8.2
- zil_commit_impl@Base 0.8.2
  zil_destroy@Base 0.8.2
  zil_destroy_sync@Base 0.8.2
  zil_fini@Base 0.8.2
@@ -3278,7 +3251,6 @@ libzpool.so.6 libzpool6linux #MINVER#
  zil_suspend@Base 0.8.2
  zil_sync@Base 0.8.2
  zio_add_child@Base 0.8.2
- zio_add_child_first@Base 2.2.0
  zio_alloc_zil@Base 0.8.2
  zio_bookmark_compare@Base 0.8.2
  zio_buf_alloc@Base 0.8.2
@@ -3450,7 +3422,5 @@ libzpool.so.6 libzpool6linux #MINVER#
  zthr_resume@Base 0.8.2
  zthr_wait_cycle_done@Base 2.0
  zthr_wakeup@Base 0.8.2
- zvol_create_minor@Base 2.0
- zvol_create_minors_recursive@Base 2.0
  zvol_remove_minors@Base 0.8.2
  zvol_rename_minors@Base 0.8.2

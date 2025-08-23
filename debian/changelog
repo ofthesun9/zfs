@@ -1,3 +1,9 @@
+zfs-linux (2.4.0~rc1-0ofthesun1) nodistro; urgency=medium
+
+  * zfs 2.4.0 rc1
+
+ -- ofthesun9 <olivier@ofthesun.net>  Sat, 23 Aug 2025 09:22:23 +0200
+
 zfs-linux (2.3.3-0ofthesun3) nodistro; urgency=medium
 
   * debian: add upstream patch 5002-enforce-arc_dnode_limit.patch
