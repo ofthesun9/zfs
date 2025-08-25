@@ -1,3 +1,9 @@
+zfs-linux (2.4.0~rc1-0ofthesun3) nodistro; urgency=medium
+
+  * symbols addition for zfs 2.4.0 rc1 
+
+ -- ofthesun9 <olivier@ofthesun.net>  Mon, 25 Aug 2025 10:13:38 +0200
+
 zfs-linux (2.4.0~rc1-0ofthesun2) nodistro; urgency=medium
 
   * symbols update for zfs 2.4.0 rc1
