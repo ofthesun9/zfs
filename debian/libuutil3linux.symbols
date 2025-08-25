@@ -1,5 +1,7 @@
 libuutil.so.3 libuutil3linux #MINVER#
 * Build-Depends-Package: libzfslinux-dev
+ __start_zfs_tunables@Base 2.4.0
+ __stop_zfs_tunables@Base 2.4.0
  _sol_getmntent@Base 0.8.2
  atomic_add_16@Base 0.8.2
  atomic_add_16_nv@Base 0.8.2
@@ -239,3 +241,7 @@ libuutil.so.3 libuutil3linux #MINVER#
  uu_strerror@Base 0.8.2
  uu_strndup@Base 0.8.2
  uu_zalloc@Base 0.8.2
+ zfs_tunable_get@Base 2.4.0
+ zfs_tunable_iter@Base 2.4.0
+ zfs_tunable_lookup@Base 2.4.0
+ zfs_tunable_set@Base 2.4.0
