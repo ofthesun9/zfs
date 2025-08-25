@@ -1,3 +1,9 @@
+zfs-linux (2.4.0~rc1-0ofthesun4) nodistro; urgency=medium
+
+  * adding debian/patches/5000-Update-compatibility.d-files.patch
+
+ -- ofthesun9 <olivier@ofthesun.net>  Mon, 25 Aug 2025 15:50:22 +0200
+
 zfs-linux (2.4.0~rc1-0ofthesun3) nodistro; urgency=medium
 
   * symbols addition for zfs 2.4.0 rc1 

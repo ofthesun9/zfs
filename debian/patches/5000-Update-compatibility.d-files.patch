@@ -1,0 +1,97 @@
+From ffffbbe1433a794d73a009a49964c012d87cf9aa Mon Sep 17 00:00:00 2001
+From: ofthesun9 <olivier@ofthesun.net>
+Date: Mon, 25 Aug 2025 15:42:06 +0200
+Subject: [PATCH] Update compatibility.d files Add an openzfs-2.4 compatibility
+ file for the next release.
+
+While there are no compatibility difference between Linux and
+FreeBSD for 2.4 symlinks for the -linux and -freebsd names are
+created for any scripts expecting that convention.
+
+Signed-off-by: ofthesun9 <olivier@ofthesun.net>
+---
+ cmd/zpool/Makefile.am                 |  5 ++-
+ cmd/zpool/compatibility.d/openzfs-2.4 | 48 +++++++++++++++++++++++++++
+ 2 files changed, 52 insertions(+), 1 deletion(-)
+ create mode 100644 cmd/zpool/compatibility.d/openzfs-2.4
+
+diff --git a/cmd/zpool/Makefile.am b/cmd/zpool/Makefile.am
+index 2f962408e..bbe0a29ce 100644
+--- a/cmd/zpool/Makefile.am
++++ b/cmd/zpool/Makefile.am
+@@ -148,6 +148,7 @@ dist_zpoolcompat_DATA = \
+ 	%D%/compatibility.d/openzfs-2.1-linux \
+ 	%D%/compatibility.d/openzfs-2.2 \
+ 	%D%/compatibility.d/openzfs-2.3 \
++        %D%/compatibility.d/openzfs-2.4 \
+ 	%D%/compatibility.d/openzfsonosx-1.7.0 \
+ 	%D%/compatibility.d/openzfsonosx-1.8.1 \
+ 	%D%/compatibility.d/openzfsonosx-1.9.3 \
+@@ -187,7 +188,9 @@ zpoolcompatlinks = \
+ 	"openzfs-2.2		openzfs-2.2-linux" \
+ 	"openzfs-2.2		openzfs-2.2-freebsd" \
+ 	"openzfs-2.3		openzfs-2.3-linux" \
+-	"openzfs-2.3		openzfs-2.3-freebsd"
++	"openzfs-2.3		openzfs-2.3-freebsd" \
++        "openzfs-2.4            openzfs-2.4-linux" \
++        "openzfs-2.4            openzfs-2.4-freebsd"
+ 
+ zpoolconfdir = $(sysconfdir)/zfs/zpool.d
+ INSTALL_DATA_HOOKS += zpool-install-data-hook
+diff --git a/cmd/zpool/compatibility.d/openzfs-2.4 b/cmd/zpool/compatibility.d/openzfs-2.4
+new file mode 100644
+index 000000000..3fbd91014
+--- /dev/null
++++ b/cmd/zpool/compatibility.d/openzfs-2.4
+@@ -0,0 +1,48 @@
++# Features supported by OpenZFS 2.4 on Linux and FreeBSD
++allocation_classes
++async_destroy
++blake3
++block_cloning
++block_cloning_endian
++bookmark_v2
++bookmark_written
++bookmarks
++device_rebuild
++device_removal
++draid
++dynamic_gang_header
++edonr
++embedded_data
++empty_bpobj
++enabled_txg
++encryption
++extensible_dataset
++fast_dedup
++filesystem_limits
++head_errlog
++hole_birth
++large_blocks
++large_dnode
++large_microzap
++livelist
++log_spacemap
++longname
++lz4_compress
++multi_vdev_crash_dump
++obsolete_counts
++physical_rewrite
++project_quota
++raidz_expansion
++redacted_datasets
++redaction_bookmarks
++redaction_list_spill
++resilver_defer
++sha512
++skein
++spacemap_histogram
++spacemap_v2
++userobj_accounting
++vdev_zaps_v2
++zilsaxattr
++zpool_checkpoint
++zstd_compress
+-- 
+2.43.0
+

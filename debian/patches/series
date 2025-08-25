@@ -20,3 +20,4 @@ ubuntu/zfs-mount-container-start.patch
 fix-pyzfs-version.patch
 BUILD_EXCLUSIVE_KERNEL_MIN.patch
 #0000_unapplied/bump-Linux-Minimum.patch
+5000-Update-compatibility.d-files.patch
