@@ -1,3 +1,13 @@
+zfs-linux (2.3.4-0ofthesun1) nodistro; urgency=medium
+
+  * new upstream release v2.3.4
+  *  debian:
+     - changes in debian/rules
+     - update libzpool6linux.symbols
+     - clean upstream patches
+
+ -- ofthesun9 <olivier@ofthesun.net>  Tue, 26 Aug 2025 20:48:20 +0200
+
 zfs-linux (2.3.3-0ofthesun3) nodistro; urgency=medium
 
   * debian: add upstream patch 5002-enforce-arc_dnode_limit.patch
